@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2 column layout</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Indie+Flower&display=swap" rel="stylesheet">
+        <style>
+            
+            body {
+                margin: 0;
+            }
+            .header {
+                background-color: white;
+                padding: 20px;
+                text-align: center;
+                font-family: 'Dancing Script', cursive;
+                font-size: 20px;
+            }
+
+            ul {
+                list-style-type: none;
+                background-color: black;
+                margin: 0;
+                padding :0;
+                overflow: hidden;
+            }
+
+            .navbar li {
+                float: left;
+            }
+
+            li a {
+                font-family: 'Indie Flower', cursive;
+                text-decoration: none;
+                color: white;
+                padding: 14px 16px;
+                text-align: center;
+                display: inline-block;
+            }
+
+            li a:hover {
+                background-color: white; color: black;
+            }
+            .drop-content {
+                display: none;
+                position: absolute;
+                background-color:lightgrey;
+                z-index: 1;
+                width: 10%;
+            }
+
+            .drop-content a{
+                font-family: 'Indie Flower', cursive;
+                text-decoration: none;
+                color: black;
+                display: block;
+                padding: 10px 12px;
+                text-align: left;
+            }
+
+            .dropdown:hover .drop-content {
+                display: block;
+            }
+
+            .drop-content a:hover {
+                background-color: grey;
+            }
+
+            /* CSS for columns */
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: lightskyblue;
+            }
+
+            .column-left {
+                float: left;
+                margin: 20px;
+                padding-left: 30px; 
+                padding-right: 20px;
+                width: 60%;
+            }
+
+            .column-right {
+                float:right;
+                padding-right: 30px;
+                width: 30%;
+                margin: 20px;
+            }
+
+            .main:after {
+                content:"";
+                display: table;
+                clear: both;
+            }
+
+            .card {
+                font-family: 'Indie Flower', cursive;
+                font-size:larger;
+                margin-top: 20px;
+                background-color: white;
+                padding: 20px;
+            }
+
+            .card:hover {
+                border: 1.5px solid;
+    
+            }
+
+            .footer {
+                background-color: white;
+                text-align: center;
+                margin-bottom: 0;
+                padding: 20px;
+                font-family: 'Dancing Script', cursive;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Welcome to Karthik's website</h1>
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown"><a href="#">Drop</a>
+                    <div class="drop-content">
+                        <a href="#">Link1</a>
+                        <a href="#">Link1</a>
+                        <a href="#">Link1</a>
+                        <a href="#">Link1</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <div class="column-left">
+                <div class="card">
+                    <h3>TITLE DESCRIPTION</h3>
+                    <h5>Date published: xx20</h5>
+                    <img src="images/img4.jpg" height="500" width="100%">
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+                </div>
+
+                <div class="card">
+                    <h3>TITLE DESCRIPTION</h3>
+                    <h5>Date published: xx20</h5>
+                    <img src="images/img5.jpg" height="500" width="100%">
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
+
+                <div class="card">
+                    <h3>TITLE DESCRIPTION</h3>
+                    <h5>Date published: xx20</h5>
+                    <img src="images/img6.jpg" height="600" width="100%">
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+                </div>
+            </div>
+
+            <div class="column-right">
+                <div class="card">
+                    <h3>About me</h3>
+                    <h5>Karthik</h5>
+                    <img src="images/profile.jpg" height="400" width="100%">
+                </div>
+
+                <div class="card">
+                    <h3>Follow me on social media</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Popular posts</h3>
+                    <img src="images/img4.jpg" style="padding-bottom:10px" height="300" width="100%">
+                    <img src="images/img5.jpg" height="300" width="100%">
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <h3>Footer</h3>
+        </div>
+    </body>
+</html>
